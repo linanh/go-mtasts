@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/foxcpp/go-mtasts"
+	"github.com/linanh/go-mtasts"
 )
 
 func ExampleCache_Get() {

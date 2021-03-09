@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-var httpClient = &http.Client{
+var HttpClient = &http.Client{
 	CheckRedirect: func(req *http.Request, via []*http.Request) error {
 		return errors.New("mtasts: HTTP redirects are forbidden")
 	},
@@ -24,7 +24,7 @@ func downloadPolicy(ctx context.Context, domain string) (*Policy, error) {
 	if err != nil {
 		return nil, err
 	}
-	resp, err := httpClient.Do(req)
+	resp, err := HttpClient.Do(req)
 	if err != nil {
 		return nil, err
 	}
